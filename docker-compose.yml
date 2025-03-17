@@ -1,0 +1,8 @@
+version: "3"
+services:
+  spark:
+    build: .
+    container_name: spark_sms_analysis
+    volumes:
+      - .:/app
+    command: ["spark-submit", "script.py"]
